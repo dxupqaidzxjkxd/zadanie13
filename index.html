@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Добро пожаловать на Фантастика.ком</title>
+<style>
+    footer#site-footer {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      width: 100%;
+	  position: absolute;
+	  bottom: 0;
+    }
+	</style>
+  <script>
+    var names = [];
+
+    function addName() {
+      var firstName = prompt("Введите имя");
+      var lastName = prompt("Введите фамилию");
+      
+      names.push(lastName + " " + firstName);
+    }
+
+    function displayNames() {
+      names.sort();
+      document.getElementById("sortedNames").innerHTML = names.join("<br>");
+    }
+  </script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; background-color: #E5E4E2;"> <h1>Фантастика.ком - ваш источник информации о выполненном задании</h1> <p>Мы заботимся о том, как сделать задание уютным и функциональным.</p> <button onclick="addName()">Добавить имя</button> <button onclick="displayNames()">Отсортировать и вывести имена</button> <div id="sortedNames"></div> <button onclick="window.location.href='2.html'">Перейти на страницу 2</button> </body>
+  <footer id="site-footer">
+    <p>&copy; 2024 Наш сайт.</p>
+  </footer>
+</html>
